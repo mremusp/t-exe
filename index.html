@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="scripts.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="heading">
+      <a id="login" href="#" class="active" onclick="setLogin()">Log In</a>
+      <a id="signup" href="#" onclick="setSignup()">Sign Up</a>
+    </div>
+
+    <div id="login-form" class="form-container active">
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <input type="checkbox" id="stay-logged-in">
+        <label for="stay-logged-in" id="logged-in-label">Stay logged in</label>
+
+        <input type="submit" class="button" name="login" value="Login">
+      </form>
+    </div>
+
+    <div id="signup-form" class="form-container">
+      <form>
+        <label for="username">Username</label>
+        <input type="text" name="username" />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+        <label for="password-confirm">Confirm password</label>
+        <input type="password" id="password-confirm" name="password-confirm" />
+
+        <input type="submit" class="button" name="signup" value="Create Account" />
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

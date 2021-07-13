@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+$gray: #ccc;
+$darkgray: #666;
+$red: #f30909;
+
+body {
+  background-color: $gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  background-color: $darkgray;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px 3px #999;
+}
+
+.heading {
+  font-size: 26px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+
+  a {
+    text-decoration: none;
+    color: $gray;
+    display: inline-block;
+    margin-right: 30px;
+    padding-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 5px solid transparent;
+
+    &.active{
+      border-color: $red;
+      color: #fff;
+    }
+
+    &:hover{
+      color: #fff;
+    }
+  }
+}
+
+.form-container {
+  display: none;
+  transition: all 0.3s ease-in-out;
+
+  &.active{
+    display: block;
+  }
+  label{
+    font-size: 20px;
+    line-height: 28px;
+    color: $gray;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+    &:not(#logged-in-label){
+      display: block;
+      margin-top: 15px;
+    }
+  }
+
+  input {
+    box-sizing: border-box;
+
+    &:not([type=checkbox]) {
+      display: block;
+      width: 100%;
+    }
+
+    &[type=text], &[type=password] {
+      margin-bottom: 10px;
+      font-size: 20px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid $gray;
+      color: #fff;
+
+      &:focus-visible {
+        outline: none;
+        border-color: $red;
+      }
+    }
+    
+    &.button {
+      background-color: $red;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      margin-top: 25px;
+      padding: 5px;
+      border-radius: 3px;
+
+      &:hover {
+        box-shadow: 2px 2px 5px 5px #7d7d7d;
+      }
+
+      &:active {
+        transform: translate(2px, 2px);
+        box-shadow: 0px 0px 5px 5px #7d7d7d;
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+body {
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  background-color: #666;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px 3px #999;
+}
+
+.heading {
+  font-size: 26px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.heading a {
+  text-decoration: none;
+  color: #ccc;
+  display: inline-block;
+  margin-right: 30px;
+  padding-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 5px solid transparent;
+}
+.heading a.active {
+  border-color: #f30909;
+  color: #fff;
+}
+.heading a:hover {
+  color: #fff;
+}
+
+.form-container {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+.form-container.active {
+  display: block;
+}
+.form-container label {
+  font-size: 20px;
+  line-height: 28px;
+  color: #ccc;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.form-container label:not(#logged-in-label) {
+  display: block;
+  margin-top: 15px;
+}
+.form-container input {
+  box-sizing: border-box;
+}
+.form-container input:not([type=checkbox]) {
+  display: block;
+  width: 100%;
+}
+.form-container input[type=text], .form-container input[type=password] {
+  margin-bottom: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  color: #fff;
+}
+.form-container input[type=text]:focus-visible, .form-container input[type=password]:focus-visible {
+  outline: none;
+  border-color: #f30909;
+}
+.form-container input.button {
+  background-color: #f30909;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  margin-top: 25px;
+  padding: 5px;
+  border-radius: 3px;
+}
+.form-container input.button:hover {
+  box-shadow: 2px 2px 5px 5px #7d7d7d;
+}
+.form-container input.button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 5px 5px #7d7d7d;
+}
+
+/*# sourceMappingURL=style.css.map */
